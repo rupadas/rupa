@@ -1,1 +1,0 @@
-<app-number-table [data]=data [columns]=columns></app-number-table>
