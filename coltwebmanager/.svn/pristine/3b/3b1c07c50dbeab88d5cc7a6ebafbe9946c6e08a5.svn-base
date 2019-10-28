@@ -1,0 +1,36 @@
+import { Component, ElementRef, QueryList, OnInit, Input } from '@angular/core';
+import { ViewChild } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { DataService } from '../_services';
+
+@Component({
+  selector: 'app-new-number',
+  templateUrl: './new-number.component.html',
+  styleUrls: ['./new-number.component.css']
+})
+
+export class NewNumberComponent implements OnInit {
+
+  stepNumber = 1;
+  userData:any;
+
+  constructor( 
+  	private route: ActivatedRoute,
+    private router: Router,
+    private dataService: DataService,
+  ) { }
+ 
+  ngOnInit() { 
+    this.userData = this.dataService.getUserData();
+  	this.dataService.changeRouteTitle(this.route.snapshot.data['routeName']);
+  }
+
+  stepChange(event:any, id:number) {
+    this.stepNumber = id;
+    if(id>1) {
+      this.router.navigate(['newnumber/step'+id]);
+    } else {
+      this.router.navigate(['newnumber/geo']);
+    }
+  }
+}

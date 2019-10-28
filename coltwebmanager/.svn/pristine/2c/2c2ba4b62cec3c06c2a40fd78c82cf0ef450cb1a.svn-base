@@ -1,0 +1,17 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { BaseService } from './base.service';
+
+@Injectable({
+  providedIn: 'root'
+})
+
+export class NumberService extends BaseService {
+
+  	constructor(private http: HttpClient) { super(); }
+
+  	/*Get all domains details*/
+	getLocalAreaName() {
+		return this.http.get(this.baseUrl+`all`);
+	}
+}

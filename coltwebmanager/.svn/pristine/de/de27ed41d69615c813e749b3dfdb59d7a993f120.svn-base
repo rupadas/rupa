@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-my-number',
+  templateUrl: './my-number.component.html',
+  styleUrls: ['./my-number.component.css']
+})
+export class MyNumberComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

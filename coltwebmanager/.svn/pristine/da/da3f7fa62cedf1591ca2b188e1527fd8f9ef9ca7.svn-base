@@ -1,0 +1,22 @@
+.nav-tabs.co-tabs{
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 15px;
+}
+.nav-tabs.co-tabs li a{ 
+    color:#999;
+    border: 0; 
+}
+.nav-tabs.co-tabs li a:hover,.nav-tabs.co-tabs li a.active{ 
+    border: 0;    
+    border-bottom: 3px solid #00a59b;
+    color: #00a59b;
+}
+.co-tab-count{ 
+    background: #00a59b;
+    color: #fff;
+    border-radius: 10px;
+    font-size: .65rem;
+    padding: 0rem .25rem;
+    position: relative;
+    top: -7px;
+ }

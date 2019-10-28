@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-uk-public',
+  templateUrl: './uk-public.component.html',
+  styleUrls: ['./uk-public.component.css']
+})
+export class UkPublicComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

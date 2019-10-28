@@ -1,0 +1,23 @@
+import { Component, ElementRef, QueryList, OnInit, Input } from '@angular/core';
+import { ViewChild } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { DataService } from '../_services';
+
+@Component({
+  selector: 'app-new-number',
+  templateUrl: './new-number.component.html',
+  styleUrls: ['./new-number.component.css']
+})
+
+export class NewNumberComponent implements OnInit {
+
+  constructor( 
+  	private route: ActivatedRoute,
+    private router: Router,
+    private dataService: DataService,
+  ) { }
+ 
+  ngOnInit() { 
+  	this.dataService.changeRouteTitle(this.route.snapshot.data['routeName']);
+  }
+}

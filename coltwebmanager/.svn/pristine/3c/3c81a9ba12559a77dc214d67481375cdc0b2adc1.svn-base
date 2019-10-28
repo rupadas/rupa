@@ -1,0 +1,44 @@
+<div class="col-md-12">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="checked">
+        <mat-header-cell *matHeaderCellDef><mat-checkbox #ref (click)="onClick($event)"></mat-checkbox></mat-header-cell>
+        <mat-cell *matCellDef="let element"> 
+          <mat-checkbox [(ngModel)]="element.checked"></mat-checkbox>
+        </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="telstart">
+      <mat-header-cell *matHeaderCellDef>Telephone Number Start</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.telstart}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="telend">
+      <mat-header-cell *matHeaderCellDef>Telephone Number End</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.telend}} </mat-cell>>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef> Size </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </table>
+  <div class="paginator-wrapper">
+  <mat-paginator [length]="length"
+              [pageSize]="pageSize"
+              [pageSizeOptions]="pageSizeOptions"
+              (page)="pageEvent = $event">
+  </mat-paginator>
+</div>
+
+</div>

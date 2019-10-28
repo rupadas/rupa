@@ -1,0 +1,23 @@
+<div class="row" *ngIf="data.length > 0; else error">
+	<div class="col-md-12">
+		<app-number-table [data]=data [columns]=columns [pageSize]='10'></app-number-table>
+	</div>
+	<div class="col-md-12">
+		<div class="btn-group prev-btn-box">
+			<button class="btn btn-light prev-btn" (click)="previous()">Previous</button>
+		</div>
+		<div class="btn-group next-btn-box">
+		  <button class="btn btn-light next-btn active"  (click)="showDialog = !showDialog">Next</button>
+		</div>
+	</div>
+</div>
+
+<ng-template #error>
+	<div class="row" >
+		<div class="col-md-12">
+			<app-error (buttonEvent)='onErrorButtonClick($event)'></app-error>
+		</div>
+	</div>
+</ng-template>
+
+<app-popup [(visible)]="showDialog" [title]=popUpTitle [button1Text]=popUpButton1Text [button2Text] = popUpButton2Text (buttonValue)='onPopUpButtonClick($event)'></app-popup>

@@ -1,0 +1,15 @@
+<div  *ngIf="visible" id="popup1" class="overlay" (click)="close()">
+  <div [@dialog] *ngIf="visible" class="dialog popup">
+    <div class="modal-header">
+        <h5 class="modal-title">Confirmation</h5>
+        <a *ngIf="closable" class="close" (click)="close()" aria-label="Close">&times;</a>
+    </div>
+    <div class="content">
+        <div class="content-title-box">
+            <h5 class="content-title">{{title}}</h5>
+            <button class="btn btn-success reserve-btn" (click)="buttonclick('Reserve')">{{button1Text}}</button>
+            <button class="btn btn-success reserve-btn" (click)="buttonclick('Activate')">{{button2Text}}</button>
+        </div>
+    </div>
+  </div>
+</div>

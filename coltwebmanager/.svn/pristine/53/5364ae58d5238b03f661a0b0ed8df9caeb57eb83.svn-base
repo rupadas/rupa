@@ -1,0 +1,29 @@
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
+import { DataService } from '../../_services';
+
+@Component({
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.css']
+})
+
+export class NavComponent implements OnInit {
+
+	title:string;
+
+  	constructor(
+  		private route: ActivatedRoute,
+	    private router: Router,
+	    private dataService: DataService,
+	) { }
+
+	ngOnInit() {
+		// console.log(this.dataService.getRouteTitle().subscribe(value => {
+		// 	console.log(value);
+		// }));
+		this.dataService.currentRouteTitle.subscribe(title => {
+			this.title = title;
+		})
+	}
+}

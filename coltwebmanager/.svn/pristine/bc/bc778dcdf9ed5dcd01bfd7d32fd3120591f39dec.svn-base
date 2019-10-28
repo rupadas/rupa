@@ -1,0 +1,70 @@
+<nav class="form-steps">
+  <div class="form-steps__item"  [ngClass]="stepNumber >= 1 ? 'form-steps__item-active' : ''">
+    <div class="form-steps__item-content">
+      <span class="form-steps__item-icon">1</span>
+      <span class="form-steps__item-text">Search Number Type</span>
+    </div>
+  </div>
+  <div class="form-steps__item" [ngClass]="stepNumber >= 2 ? 'form-steps__item-active' : ''">
+    <div class="form-steps__item-content">
+      <span class="form-steps__item-icon">2</span>
+      <span class="form-steps__item-line"></span>
+      <span class="form-steps__item-text">Select Numbers</span>
+    </div>
+  </div>
+  <div class="form-steps__item" [ngClass]="stepNumber >= 3 ? 'form-steps__item-active' : ''">
+    <div class="form-steps__item-content">
+      <span class="form-steps__item-icon">3</span>
+      <span class="form-steps__item-line"></span>
+      <span class="form-steps__item-text">Done</span>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row custom-row">
+    <div class="col-md-12" *ngIf="stepNumber == 1">
+      <div class="white-box">
+        <h5 class="box-title">What type of telephone numbers do you need?</h5>
+        <div class="btn-wrapper">
+          <div class="tooltip">
+            <a routerLinkActive="active" routerLink="/newnumber/geo" class="btn btn-outline-success custom-btn active" role="button">Geo</a>
+            <div class="tooltiptext">
+              <p class="tooltip-title">This place can be reserved as contextual help</p>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tempus enim. Pellentesque eget
+                mauris in mauris blandit ullamcorper nec eget mauris. Vestibulum placerat consectetur accumsan.
+              </span>
+            </div>
+          </div>
+          <div class="tooltip">
+            <a routerLinkActive="active" routerLink="/newnumber/locationindependent" class="btn btn-outline-success custom-btn" role="button">Location Independent</a>
+            <div class="tooltiptext">
+              <p class="tooltip-title">This place can be reserved as contextual help</p>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tempus enim. Pellentesque eget
+                mauris in mauris blandit ullamcorper nec eget mauris. Vestibulum placerat consectetur accumsan.
+              </span>
+            </div>
+          </div>
+          <div class="tooltip">
+            <a routerLinkActive="active" routerLink="/newnumber/ukany" class="btn btn-outline-success custom-btn" role="button">UK Wide (any Service)</a>
+            <div class="tooltiptext">
+              <p class="tooltip-title">This place can be reserved as contextual help</p>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tempus enim. Pellentesque eget
+                mauris in mauris blandit ullamcorper nec eget mauris. Vestibulum placerat consectetur accumsan.</span>
+            </div>
+          </div>
+          <div class="tooltip">
+            <a routerLinkActive="active" routerLink="/newnumber/ukpublic" class="btn btn-outline-success custom-btn" role="button">UK Wide (Public service)</a>
+            <div class="tooltiptext">
+              <p class="tooltip-title">This place can be reserved as contextual help</p>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tempus enim. Pellentesque eget
+                mauris in mauris blandit ullamcorper nec eget mauris. Vestibulum placerat consectetur accumsan.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

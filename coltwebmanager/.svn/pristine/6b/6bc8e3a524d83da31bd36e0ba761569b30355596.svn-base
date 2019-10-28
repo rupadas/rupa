@@ -1,0 +1,24 @@
+import { Component, ElementRef, QueryList, OnInit, Input } from '@angular/core';
+import { ViewChild } from '@angular/core';
+import { DataService } from '../_services';
+
+@Component({
+  selector: 'app-new-number',
+  templateUrl: './new-number.component.html',
+  styleUrls: ['./new-number.component.css']
+})
+
+export class NewNumberComponent implements OnInit {
+
+  userData:any;
+  
+  constructor( 
+    private dataService : DataService,
+  ) { }
+ 
+  ngOnInit() { 
+    console.log(this.dataService.getCurrentUser());
+    this.userData = this.dataService.getUserData(); 
+    console.log(this.userData);
+  }
+}

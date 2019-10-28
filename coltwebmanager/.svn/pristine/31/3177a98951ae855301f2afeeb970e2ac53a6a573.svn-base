@@ -1,0 +1,49 @@
+<div class="navbar-default sidebar" role="navigation">
+  <div class="sidebar-nav navbar-collapse slimscrollsidebar">
+    <ul class="nav" id="side-menu">
+      <li class="sidebar-menu">
+      <div class="" [class.active-link]="currentUrl == '/sidebar'"></div>
+        <div class="" [class.active-link]="currentUrl.indexOf('newnumber')>=0"></div>
+        <a routerLink="/newnumber/geo"  [routerLinkActive]="['active']" class="waves-effect">
+          <span class="hide-menu">Get New Number</span>
+        </a>
+      </li>
+      <li>
+        <div class="" [class.active-link]="currentUrl == '/mynumber'"></div>
+        <a routerLink="/mynumber" [routerLinkActive]="['active']" class="waves-effect"><span class="hide-menu">My Numbers</span></a>
+      </li>
+      <li>
+        <div class="" [class.active-link]="currentUrl == '/portin'"></div>
+        <a routerLink="/portin" [routerLinkActive]="['active']" class="waves-effect"><span class="hide-menu">Port-in</span></a>
+      </li>
+      <li>
+        <div class="" [class.active-link]="currentUrl == '/portout'"></div>
+        <a routerLink="/portout" [routerLinkActive]="['active']" class="waves-effect"><span class="hide-menu">Port-out</span></a>
+      </li>
+      <li>
+        <div class="" [class.active-link]="currentUrl == '/bulkrequest'"></div>
+        <a routerLink="/bulkrequest" [routerLinkActive]="['active']" class="waves-effect"><span class="hide-menu">Bulk request</span></a>
+      </li>
+      <li>
+        <div class="" [class.active-link]="currentUrl == '/downloadcdr'"></div>
+        <a routerLink="/downloadcdr" [routerLinkActive]="['active']" class="waves-effect"><span class="hide-menu">Download CDRs</span></a>
+      </li>
+      <li>
+        <div class="" [class.active-link]="currentUrl == '/myaccount'"></div>
+        <a routerLink="/myaccount" [routerLinkActive]="['active']" class="waves-effect"><span class="hide-menu">My Account</span></a>
+      </li>
+      <li>
+        <div class="" [class.active-link]="currentUrl == '/faq'"></div>
+        <a routerLink="/faq" [routerLinkActive]="['active']" class="waves-effect"><span class="hide-menu">FAQ</span></a>
+      </li>
+      <li>
+        <div class="" [class.active-link]="currentUrl == '/help'"></div>
+        <a routerLink="/help" [routerLinkActive]="['active']" class="waves-effect"><span class="hide-menu">Help</span></a>
+      </li>
+      <li>
+        <div class="" [class.active-link]="currentUrl == '/contactus'"></div>
+        <a routerLink="/contactus" [routerLinkActive]="['active']" class="waves-effect"><span class="hide-menu">Contact Us</span></a>
+      </li>
+    </ul>
+  </div>
+</div>

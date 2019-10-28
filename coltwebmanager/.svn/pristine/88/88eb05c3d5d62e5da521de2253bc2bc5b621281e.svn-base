@@ -1,0 +1,92 @@
+<nav class="form-steps">
+  <div class="form-steps__item form-steps__item-active">
+    <div class="form-steps__item-content">
+      <span class="form-steps__item-icon">1</span>
+      <span class="form-steps__item-text">Search Number Type</span>
+    </div>
+  </div>
+  <div class="form-steps__item">
+    <div class="form-steps__item-content">
+      <span class="form-steps__item-icon">2</span>
+      <span class="form-steps__item-line"></span>
+      <span class="form-steps__item-text">Select Numbers</span>
+    </div>
+  </div>
+  <div class="form-steps__item">
+    <div class="form-steps__item-content">
+      <span class="form-steps__item-icon">3</span>
+      <span class="form-steps__item-line"></span>
+      <span class="form-steps__item-text">Done</span>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row custom-row">
+    <div class="col-md-12">
+      <div class="white-box">
+        <h5 class="box-title">What type of numbers do you need?</h5>
+        <div class="btn-wrapper">
+          <div class="tooltip">
+            <a routerLink="" class="btn btn-outline-success custom-btn active" role="button">Geo</a>
+          <div class="tooltiptext">
+            <p class="tooltip-title">This place can be reserved as contextual help</p>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tempus enim. Pellentesque eget mauris in mauris blandit ullamcorper nec eget mauris. Vestibulum placerat consectetur accumsan.
+            </span>
+          </div>
+          </div>
+          <div class="tooltip">
+            <a routerLink="" class="btn btn-outline-success custom-btn" role="button">Location Independent</a>
+            <div class="tooltiptext">
+              <p class="tooltip-title">This place can be reserved as contextual help</p>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tempus enim. Pellentesque eget mauris in mauris blandit ullamcorper nec eget mauris. Vestibulum placerat consectetur accumsan.
+              </span>
+          </div>
+        </div>
+        <div class="tooltip">
+          <a routerLink="" class="btn btn-outline-success custom-btn" role="button">UK Wide (any Service)</a>
+          <div class="tooltiptext">
+            <p class="tooltip-title">This place can be reserved as contextual help</p>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tempus enim. Pellentesque eget mauris in mauris blandit ullamcorper nec eget mauris. Vestibulum placerat consectetur accumsan.</span>
+          </div>
+        </div>
+        <div class="tooltip">
+          <a routerLink="" class="btn btn-outline-success custom-btn" role="button">UK Wide (Public service)</a>
+          <div class="tooltiptext">
+            <p class="tooltip-title">This place can be reserved as contextual help</p>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tempus enim. Pellentesque eget mauris in mauris blandit ullamcorper nec eget mauris. Vestibulum placerat consectetur accumsan.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-12">
+      <div class="white-box toggle-wrapper">
+        <span class="switcher switcher-1">
+          <input type="checkbox" id="switcher-1">
+          <label for="switcher-1"></label>
+        </span>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="white-box map-wrapper">
+        <div #map id="map" style="width:100%;height:250px;" *ngIf="userData.country =='FR' || userData.country == 'GB' "></div>
+        <div class="telephone-wrapper">
+          <div class="service-label">
+            <h5 class="number-title">What type of numbers do you need?</h5>
+          </div>
+          <select class="form-control telephone-select" name="telephone" (change)="numberChange($event)">
+           <option value="">Please select</option>
+           <option *ngFor="let number of [1,2,3,4,5,6]">{{number}}</option>
+          </select>
+          <div class="co-nubmber-info">
+            <span class=""><img src="assets/images/info-icon.svg"></span>
+            <span class="co-number-text">You will get X=X*10 numbers for eg 50=5*10</span>
+          </div>
+        </div>
+        <div class="btn-group pull-right">
+          <button class="btn btn-light next-btn" type="button" [disabled]='buttonDisable' [ngClass]="!buttonDisable ? 'active' : ''" (click)="next()">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

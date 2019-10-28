@@ -1,0 +1,21 @@
+.common-footer {
+    z-index: 1000;
+    position: absolute;
+    right: 0;
+}
+.co-footer-nav {
+    display: block;
+}
+.co-footer-bg{ 
+    background: #00a59b;
+    border-top: 1px solid #cccccc;
+    padding: 1rem 0;
+ }
+
+ .co-footer-nav .list-group-item a{
+     color: #fff !important;
+ }
+ .co-footer-center{
+     margin: 0 auto;
+     text-align: center;
+ }

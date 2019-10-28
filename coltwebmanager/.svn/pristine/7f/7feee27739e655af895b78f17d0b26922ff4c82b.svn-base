@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cocom Web Manager</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+   <!-- This script is required for bootstrap4 dropdown -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>   
+   <script src="src/co-main.js"></script>
+   <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAoqlD8oWougUOrRoB8cp1j-LE5boJP_uc"></script>      
+   <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet" />
+</head>
+<body> 
+  <app-root></app-root>
+  
+</body>
+</html>

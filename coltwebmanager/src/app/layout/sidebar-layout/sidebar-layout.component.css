@@ -1,0 +1,7 @@
+.page-wrapper {
+    /* position: inherit;
+    margin: 0 0 0 240px; */
+    padding-bottom: 5px;
+    min-height: calc(100vh);
+    background: #fff;
+}

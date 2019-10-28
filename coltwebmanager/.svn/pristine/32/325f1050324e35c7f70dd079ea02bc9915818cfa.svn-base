@@ -1,0 +1,21 @@
+<div class="white-box">
+    <form [formGroup]='newnumberForm' (ngSubmit)="onSubmit()" class="telephone-wrapper">
+    	<div class="service-label">
+		  <h5 class="number-title">How many telephone number do you need?*<img src="assets/images/info-icon.svg"
+		      width="20px" height="20px" style="vertical-align:top">
+		  </h5>
+		</div>
+		<select class="form-control telephone-select" formControlName="telephone" (change)="numberChange($event)">
+		  <option [value]="null">Please select</option>
+		  <option *ngFor="let number of ['1-9', '10-100', '100-900']" [value]=number>{{number}}</option>
+		</select>
+		<div class="co-nubmber-info">
+			<span class=""><img src="assets/images/info-icon.svg"></span>
+			<span class="co-number-text">You will get X=X*10 numbers for eg 50=5*10</span>
+		</div>
+		<div class="btn-group next-btn-box location-btn">
+			<button class="btn btn-light next-btn"  [disabled]='buttonDisable'
+			  [ngClass]="!buttonDisable ? 'active' : ''">Next</button>
+		</div>
+    </form> 
+</div>

@@ -1,0 +1,56 @@
+<div class="container-fluid co-dash-bg p-b125 co-dash-height"> 
+  <div class="row header-container">
+    <div class="col-md-12 custom-header-box">
+      <div class="wel-title">
+        <h4>Welcome to Cocom, your On Demand Number Management Interface</h4>
+          <span>Please select your service and let's get started</span>
+      </div>
+    </div>
+  </div>
+  <div class="container">         
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group center">
+            <div class="service-label">
+              <label for="service" class="co-custom-label">Please provide your details</label>
+            </div>
+            <ng-select   *ngIf="currentUser.role == 'external' "              
+              placeholder="Domain"
+              [searchable] = true
+              [(ngModel)]="domain"
+              (change)="domainChange()"
+              [items]="domains"
+              bindLabel="name" 
+              bindValue="name"
+            >
+            </ng-select>
+
+            <ng-select                 
+              placeholder="Country"
+              [searchable] = true
+              [(ngModel)]="country"
+              (change)="countryChange()"
+              [items]="countries"
+              bindLabel="name" 
+              bindValue="name"
+            >
+            </ng-select>
+
+            <ng-select                 
+              placeholder="Profile"
+              [searchable] = true
+              [(ngModel)]="profile"
+              (change)="profileChange()"
+              [items]="profiles"
+              bindLabel="name" 
+              bindValue="name"
+            >
+            </ng-select>
+        </div>
+      </div>
+      <div class="btn-group center-btn">
+        <a class="btn custom-btn" (click)="getStarted()" >Get Started</a>
+      </div>
+    </div>
+  </div>
+</div>

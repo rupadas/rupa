@@ -1,0 +1,14 @@
+<app-number-table [data]=data [columns]=columns></app-number-table>
+<div class="col-md-12">
+<div class="btn-group prev-btn-box">
+	<button class="btn btn-light prev-btn" (click)="previous()">Previous</button>
+</div>
+<div class="btn-group next-btn-box">
+  <button class="btn btn-light next-btn active"  (click)="next()">Next</button>
+</div>
+</div>
+
+<!-- modal popup -->
+<!--<div class="box">
+<a class="btn btn-light" href="#popup1">Let me Pop up</a>
+</div>-->

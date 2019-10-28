@@ -1,0 +1,4 @@
+.page-wrapper {
+    position: inherit;
+    margin: 0 0 0 220px;
+}

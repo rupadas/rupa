@@ -1,0 +1,53 @@
+import { Component, ElementRef, QueryList, OnInit, Input } from '@angular/core';
+import { map }  from 'googlemaps';
+import { ViewChild } from '@angular/core';
+import { WelcomeService, DataService } from '../_services';
+
+@Component({
+  selector: 'app-new-number',
+  templateUrl: './new-number.component.html',
+  styleUrls: ['./new-number.component.css']
+})
+
+export class NewNumberComponent implements OnInit {
+
+  userData:any;
+  buttonDisable:boolean = true; 
+  @ViewChild('map') mapElement: ElementRef;
+  map: google.maps.Map;
+	
+  constructor( 
+    private welcomeService:WelcomeService,
+    private dataService : DataService
+  ) { }
+ 
+  ngOnInit() {
+    this.buttonDisable = true; 
+    this.userData = this.dataService.getUserData(); 
+    console.log(this.userData);
+  }
+
+  ngAfterViewInit() {
+    const mapProperties = {
+      center: new google.maps.LatLng(35.2271, -80.8431),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    this.map = new google.maps.Map(this.mapElement.nativeElement,    mapProperties);
+  }
+
+  geo(val) { }
+
+  numberChange (event:any) {
+    this.buttonDisable = true;
+    if(event.target.value != "") {
+      this.buttonDisable = false;
+      this.userData.phoneNumberType = event.target.value;
+      this.dataService.setUserData(this.userData);
+    } 
+  }
+
+  next() {
+    console.log('clicked');
+  }
+}

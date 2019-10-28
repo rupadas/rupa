@@ -1,0 +1,149 @@
+.active-title-box {
+    border-bottom: 1px solid #969696;
+    padding: 8px 0 4px 5px;
+    margin-left: 0px;
+    margin-right: 15px;
+    color: #00A59B;
+    margin-bottom: 15px;
+}
+.tel-desc-box {
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+.tel-title {
+    margin-bottom: 2px;
+    display: inline-block;
+}
+.tel-desc-box span {
+    font-weight: 400;
+}
+.card-header.bg-card{
+    background-color: #00A59B;
+    color:#fff;
+}
+.card-header h5{
+    margin-bottom: 0;
+}
+.card-header a{
+    color: #fff !important;
+}
+.table-header{
+    background-color: #00A59B;
+    color: #fff;
+}
+.vertical-top-img{
+    vertical-align: top;
+}
+/* Ref box start */
+.card.custom-card {
+    margin-bottom: 20px;
+}
+.form-group.inline-box {
+    display: inline-block;
+}
+.ref-box {
+    width: 100%;
+}
+label.control-label {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+/* Ref box ends */
+
+/* Tooltip Starts */
+.tel-desc-box .tooltip {
+    position: relative;
+    display: inline-block;
+    opacity: 1 !important;
+    vertical-align: top;
+}
+.tel-desc-box .tooltip .tooltiptext{
+    visibility: hidden;
+    min-width: 300px;
+    background-color: #00A59B;
+    color: #fff;
+    border-radius: 2px;
+    padding: 25px 0 25px 15px;
+    position: absolute;
+    z-index: 1;
+    top: 140%;
+    left: -120%;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 12px;
+}
+.tel-desc-box .tooltip .tooltiptext::after {
+	content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #00A59B transparent;
+  }
+  .tel-desc-box .tooltip:hover .tooltiptext {
+	visibility: visible;
+  }
+/* Tooltip Ends */
+
+/* Custom radio buttons starts */
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #151414;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #00A59B;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    border-radius: 100%;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.business-radio-box {
+    width: 215px;
+    display: inline-block;
+}
+/* Custom radio buttons ends */
+.end-cust-details{
+    margin-bottom: 1rem;
+}

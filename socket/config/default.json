@@ -1,0 +1,12 @@
+{ 
+"Pusher": {
+    "app_id" : "287803",
+    "key" : "267b1735d5f6b92f96b0", 
+    "secret" : "c37f162fa8ee6b9ffe3d",
+    "cluster" : "mt1",
+    "auth_url" : "https://kpbportcity.yardmanagementsolutions.com/node/auth/index.php",
+    "channel": "presence-YMSAlerts"
+    },
+"Endpoint": "/notify",
+"Port":8080
+}

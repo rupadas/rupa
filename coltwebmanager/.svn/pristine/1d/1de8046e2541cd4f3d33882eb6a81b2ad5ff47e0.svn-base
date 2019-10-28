@@ -1,0 +1,52 @@
+import { SidebarComponent } from './ui/sidebar/sidebar.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import  { ReactiveFormsModule, FormsModule} from '@angular/forms' ;
+import { NgSelectModule } from '@ng-select/ng-select';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './ui/header/header.component';
+import { FooterComponent } from './ui/footer/footer.component';
+import { NavComponent } from './ui/nav/nav.component';
+import { MyNumberComponent } from './my-number/my-number.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TabsComponent } from './ui/tabs/tabs.component';
+import { NewNumberComponent } from './new-number/new-number.component';
+import { SidebarLayoutComponent } from './_layout/sidebar-layout/sidebar-layout.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { InfoHeaderComponent } from './ui/info-header/info-header.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavComponent,
+    MyNumberComponent,
+    NavComponent,
+    DashboardComponent,
+    TabsComponent,
+    SidebarComponent,
+    NewNumberComponent,
+    SidebarLayoutComponent,
+    WelcomeComponent,
+    InfoHeaderComponent,
+  ],
+  
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    NgSelectModule,
+    AngularFontAwesomeModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+
+export class AppModule { }

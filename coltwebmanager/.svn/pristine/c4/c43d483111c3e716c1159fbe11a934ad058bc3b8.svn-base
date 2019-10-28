@@ -1,0 +1,19 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+
+	public userData:any;
+
+	constructor() { }
+
+	public setUserData(data) {
+		localStorage.setItem('userData', JSON.stringify(data));
+	}
+
+	public getUserData() {
+		return JSON.parse(localStorage.getItem('userData'));
+	}
+}

@@ -1,0 +1,47 @@
+import { Component, OnInit } from '@angular/core';
+import { DataService} from '../../_services';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-uk-public',
+  templateUrl: './uk-public.component.html',
+  styleUrls: ['./uk-public.component.css', '../new-number.component.css']
+})
+export class UkPublicComponent implements OnInit {
+
+	userData:any;
+	buttonDisable:boolean = true;
+	newnumberForm: FormGroup;
+	formData:any;
+
+	constructor(
+		private dataService : DataService,
+	    private formBuilder: FormBuilder
+	) { }
+
+	ngOnInit() {
+		this.userData = this.dataService.getUserData();
+		/*form validation*/
+	    this.newnumberForm = this.formBuilder.group({
+	      telephone:[null, Validators.required],
+	    });
+	}
+
+	onSubmit() {
+		if (!this.newnumberForm.valid) {
+		  this.buttonDisable = true;
+		  return;
+		} else {
+		  this.userData.telephone = this.newnumberForm.controls.telephone.value,
+		  this.dataService.setUserData(this.userData);
+		}
+	}
+
+  	numberChange (event:any) {
+		this.buttonDisable = true;
+		if(event.target.value != "") {
+		  this.buttonDisable = false;
+		} 
+	}
+
+}
